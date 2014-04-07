@@ -1,6 +1,3 @@
 recetario
 =========
-Test
-Holaaa
-como tas
-nueva lineas
+ahora borre todo el texto y cree nuevo
