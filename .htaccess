@@ -663,3 +663,12 @@ FileETag None
 #        SetOutputFilter INCLUDES
 #    </FilesMatch>
 # </IfModule>
+
+RewriteEngine On
+
+RewriteCond %{QUERY_STRING} [^a-z](cast|char|convert|declare|delete|drop|exec|insert|meta|script|select|set|truncate|update)[^a-z] [NC]
+RewriteRule (.*) - [F] 
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA,PT]

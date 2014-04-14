@@ -1,0 +1,8 @@
+{
+    "PHP": {
+        "phpExtraPaths": ['application/','system/']
+    }
+    "JavaScript": {
+        "javascriptExtraPaths": ['assets/js/']
+    },
+}
